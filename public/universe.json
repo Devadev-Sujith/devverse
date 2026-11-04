@@ -1,0 +1,63 @@
+{
+  "generatedAt": "2026-11-04T02:29:13.930Z",
+  "user": "Devadev-Sujith",
+  "repos": [
+    {
+      "name": "Catroid",
+      "description": "Writing programs on an Android device without prior knowledge.",
+      "url": "https://github.com/Devadev-Sujith/Catroid",
+      "homepage": "https://www.catrobat.org/",
+      "language": null,
+      "languages": {
+        "Java": 6537038,
+        "Kotlin": 2225536,
+        "Python": 3078,
+        "Shell": 2618
+      },
+      "stars": 0,
+      "forks": 0,
+      "topics": [],
+      "createdAt": "2026-03-14T13:56:35Z",
+      "pushedAt": "2026-03-14T01:23:48Z",
+      "size": 188319,
+      "fork": true,
+      "defaultBranch": "develop"
+    },
+    {
+      "name": "Knowledge-Hub-Android-App",
+      "description": null,
+      "url": "https://github.com/Devadev-Sujith/Knowledge-Hub-Android-App",
+      "homepage": null,
+      "language": "Kotlin",
+      "languages": {
+        "Kotlin": 7210
+      },
+      "stars": 0,
+      "forks": 0,
+      "topics": [],
+      "createdAt": "2025-12-14T08:55:29Z",
+      "pushedAt": "2025-12-14T09:46:56Z",
+      "size": 94,
+      "fork": false,
+      "defaultBranch": "main"
+    },
+    {
+      "name": "Zerodha-PS1-100xUniversity",
+      "description": null,
+      "url": "https://github.com/Devadev-Sujith/Zerodha-PS1-100xUniversity",
+      "homepage": null,
+      "language": "HTML",
+      "languages": {
+        "HTML": 977
+      },
+      "stars": 0,
+      "forks": 0,
+      "topics": [],
+      "createdAt": "2026-01-10T12:56:11Z",
+      "pushedAt": "2026-01-10T12:57:23Z",
+      "size": 511,
+      "fork": false,
+      "defaultBranch": "main"
+    }
+  ]
+}
