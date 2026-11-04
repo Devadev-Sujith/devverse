@@ -14,7 +14,7 @@ export function useConstellations() {
   return useMemo(() => {
     const groups = profile.skills
     return groups.map((g, gi) => {
-      const spread = 50
+      const spread = 46
       const cx = (gi - (groups.length - 1) / 2) * spread
       const cy = SKY_CENTER.y + (gi % 2 === 0 ? 10 : -12)
       const center = new THREE.Vector3(cx, cy, SKY_CENTER.z + Math.abs(gi - (groups.length - 1) / 2) * 20)

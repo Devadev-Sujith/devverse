@@ -35,7 +35,8 @@ export function Warp() {
     const s = state.current
     const active = phase === 'warp'
     if (active) s.elapsed += dt
-    s.opacity = THREE.MathUtils.lerp(s.opacity, active ? 1 : 0, active ? 0.08 : 0.04)
+    s.opacity = THREE.MathUtils.lerp(s.opacity, active ? 1 : 0, Math.min(1, dt * (active ? 5 : 2.5)))
+    if (!active && s.opacity < 0.01) s.opacity = 0
     if (!group.current || !mat.current) return
     group.current.visible = s.opacity > 0.01
     if (!group.current.visible) return

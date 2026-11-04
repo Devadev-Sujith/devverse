@@ -41,7 +41,7 @@ export function CameraRig() {
       case 'skills':
         {
         const pan = isMobile() ? 0 : -38
-        void c.setLookAt(pan, 34, isMobile() ? 40 : -22, SKY_CENTER.x + pan, SKY_CENTER.y, SKY_CENTER.z, true)
+        void c.setLookAt(pan, 34, isMobile() ? 40 : -6, SKY_CENTER.x + pan, SKY_CENTER.y, SKY_CENTER.z, true)
         break
       }
       case 'core':

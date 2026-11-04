@@ -242,10 +242,12 @@ body.pointer .cursor span { width: 52px; height: 52px; left: -26px; top: -26px; 
   .logo { font-size: 17px; }
   .icon-btn { width: 36px; height: 36px; }
   .telemetry, .radar, .hint { display: none; }
-  .dock { left: 10px; right: 10px; bottom: 12px; transform: none; justify-content: space-between; overflow-x: auto; }
+  .who { display: none; }
+  .dock { left: 10px; right: 10px; bottom: 12px; transform: none; justify-content: space-between; overflow-x: auto; scrollbar-width: none; }
+  .dock::-webkit-scrollbar { display: none; }
   .dock button { padding: 10px 10px; font-size: 9px; letter-spacing: 0.1em; }
   .dock kbd { display: none; }
-  .panel, .list-panel, .skills-panel { left: 10px; right: 10px; width: auto; top: auto; bottom: 74px; max-height: 58vh; padding: 20px 18px; animation-name: sheetIn; }
+  .panel, .list-panel, .skills-panel { left: 10px; right: 10px; width: auto; top: auto; bottom: 74px; max-height: 48vh; padding: 20px 18px; animation-name: sheetIn; }
   .skills-panel { max-height: 34vh; }
   .stats { grid-template-columns: repeat(2, 1fr); }
   .stats .wide { grid-column: span 2; }
