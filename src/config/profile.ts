@@ -105,7 +105,7 @@ export const profile = {
   projects: {
     includeForks: true,
     /** Repo names to keep out of the universe. */
-    hidden: [] as string[],
+    hidden: ['devverse'] as string[],
     /** Per-repo tweaks, keyed by repo name. */
     overrides: {
       'Knowledge-Hub-Android-App': {
