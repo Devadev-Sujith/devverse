@@ -24,9 +24,10 @@ How planets are generated from your repos:
 | size | planet size |
 | number of languages | moons |
 | stars, featured, or forked | rings |
-| `homepage` field on GitHub | deployment link for the launch button |
+| GitHub Pages enabled on the repo | standard Pages URL detected automatically |
+| `homepage` field on GitHub | deployment link for other hosted projects |
 
-The planet panel always shows a launch button. It opens the GitHub **Website** URL (or an override `demo` URL) in a new tab when one is configured; otherwise it appears gray and disabled. Set `launchLabel` in a repo's override to customize its label, for example `Launch game`, `Open website`, or `Get Android app`.
+The planet panel always shows a launch button. For GitHub Pages, Devverse uses GitHub's public repository metadata to detect Pages and derive the standard URL. If the repo has a custom domain or uses another host (such as Vercel or Netlify), add that address to the repo's **Website** field or a `demo` override. The button opens the deployment in a new tab when a URL is available; otherwise it appears gray and disabled. Set `launchLabel` in a repo's override to customize its label, for example `Launch game`, `Open website`, or `Get Android app`.
 
 ## Run locally
 

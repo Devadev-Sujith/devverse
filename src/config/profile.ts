@@ -114,9 +114,6 @@ export const profile = {
         tagline: 'An animated Android app for exploring tech fields',
         featured: true,
       },
-      'pulse-stride': {
-        demo: 'https://devadev-sujith.github.io/pulse-stride/',
-      },
       Catroid: {
         tagline: 'Open-source contribution: visual programming on Android',
       },

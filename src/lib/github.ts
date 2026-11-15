@@ -15,9 +15,10 @@ type ApiRepo = {
   size: number
   fork: boolean
   default_branch: string
+  has_pages?: boolean
 }
 
-const CACHE_KEY = `devverse:${profile.githubUser}:v1`
+const CACHE_KEY = `devverse:${profile.githubUser}:v3`
 
 function fromApi(r: ApiRepo, languages?: Record<string, number>): RepoData {
   return {
@@ -70,13 +71,29 @@ export async function loadRepos(): Promise<RepoData[]> {
     const merged = await Promise.all(
       live.map(async (r) => {
         const known = byName.get(r.name)
-        if (known) return { ...fromApi(r, known.languages) }
-        try {
-          const lr = await fetch(`https://api.github.com/repos/${profile.githubUser}/${r.name}/languages`)
-          return fromApi(r, lr.ok ? await lr.json() : undefined)
-        } catch {
-          return fromApi(r)
+        let repo: RepoData
+        if (known) {
+          repo = fromApi(r, known.languages)
+        } else {
+          try {
+            const lr = await fetch(`https://api.github.com/repos/${profile.githubUser}/${r.name}/languages`)
+            repo = fromApi(r, lr.ok ? await lr.json() : undefined)
+          } catch {
+            repo = fromApi(r)
+          }
         }
+
+        // GitHub does not copy Pages deployments into the homepage field.
+        // The public repository API does expose whether Pages is enabled.
+        if (repo.homepage) return repo
+        if (r.has_pages) {
+          const owner = profile.githubUser.toLowerCase()
+          const pagesUrl = r.name.toLowerCase() === `${owner}.github.io`
+            ? `https://${owner}.github.io/`
+            : `https://${owner}.github.io/${r.name.toLowerCase()}/`
+          return { ...repo, homepage: pagesUrl }
+        }
+        return repo
       }),
     )
     sessionStorage.setItem(CACHE_KEY, JSON.stringify(merged))
