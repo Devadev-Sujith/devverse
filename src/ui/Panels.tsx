@@ -128,10 +128,14 @@ export function WorldPanel() {
             View source ↗
           </a>
         )}
-        {world.demo && (
-          <a className="btn" href={world.demo} target="_blank" rel="noreferrer">
-            Launch demo ↗
+        {world.demo ? (
+          <a className="btn launch" href={world.demo} target="_blank" rel="noopener noreferrer">
+            {world.launchLabel ?? 'Launch app'} ↗
           </a>
+        ) : (
+          <button className="btn launch unavailable" type="button" disabled aria-disabled="true">
+            {world.launchLabel ?? 'Launch app'}
+          </button>
         )}
       </div>
       <Readme world={world} />

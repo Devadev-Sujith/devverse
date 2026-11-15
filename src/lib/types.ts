@@ -14,6 +14,7 @@ export type RepoData = {
   fork: boolean
   defaultBranch: string
   external?: boolean
+  launchLabel?: string
 }
 
 export type PlanetKind = 'rocky' | 'gas' | 'ice' | 'lava' | 'ocean'
@@ -23,6 +24,7 @@ export type World = RepoData & {
   index: number
   tagline?: string
   demo?: string
+  launchLabel?: string
   featured: boolean
   color: string
   color2: string

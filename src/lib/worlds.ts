@@ -48,6 +48,7 @@ export function buildWorlds(repos: RepoData[]): World[] {
       fork: false,
       defaultBranch: 'main',
       external: true,
+      launchLabel: e.launchLabel,
     })),
   ]
   all.sort((a, b) => +new Date(a.createdAt) - +new Date(b.createdAt))
@@ -69,6 +70,7 @@ export function buildWorlds(repos: RepoData[]): World[] {
       index,
       tagline: o.tagline,
       demo: o.demo ?? (r.homepage || undefined),
+      launchLabel: o.launchLabel ?? r.launchLabel ?? 'Launch app',
       featured: !!o.featured,
       color: base,
       color2: shift(base, rand(seed, 2) > 0.5 ? 0.25 : -0.25),

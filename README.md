@@ -13,7 +13,7 @@ Built with React, Three.js (react-three-fiber), custom GLSL shaders, and Vite.
 
 ## Make it yours
 
-Everything personal lives in **[`src/config/profile.ts`](src/config/profile.ts)**: name, bio, contact links, skills, extra milestones, and per-project overrides (tagline, demo link, featured, hidden).
+Everything personal lives in **[`src/config/profile.ts`](src/config/profile.ts)**: name, bio, contact links, skills, extra milestones, and per-project overrides (tagline, deployment link, launch label, featured, hidden).
 
 How planets are generated from your repos:
 
@@ -24,9 +24,9 @@ How planets are generated from your repos:
 | size | planet size |
 | number of languages | moons |
 | stars, featured, or forked | rings |
-| `homepage` field on GitHub | "Launch demo" button |
+| `homepage` field on GitHub | deployment link for the launch button |
 
-To give a project a live demo button, set the repo's **Website** on GitHub, or add `demo` in `profile.projects.overrides`.
+The planet panel always shows a launch button. It opens the GitHub **Website** URL (or an override `demo` URL) in a new tab when one is configured; otherwise it appears gray and disabled. Set `launchLabel` in a repo's override to customize its label, for example `Launch game`, `Open website`, or `Get Android app`.
 
 ## Run locally
 

@@ -15,6 +15,7 @@ export type ProjectOverride = {
   tagline?: string
   description?: string
   demo?: string
+  launchLabel?: string
   featured?: boolean
 }
 export type ExtraProject = {
@@ -22,6 +23,7 @@ export type ExtraProject = {
   description: string
   url?: string
   demo?: string
+  launchLabel?: string
   language?: string
   topics?: string[]
   createdAt: string

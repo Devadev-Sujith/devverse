@@ -144,6 +144,9 @@ kbd { font-family: var(--mono); font-size: 0.7em; padding: 1px 6px; border: 1px 
 .btn:hover { border-color: var(--accent); color: var(--accent); }
 .btn.primary { background: linear-gradient(90deg, var(--accent), var(--accent2)); color: #02030a; border: 0; box-shadow: 0 0 20px rgba(124, 247, 201, 0.3); }
 .btn.primary:hover { color: #02030a; box-shadow: 0 0 34px rgba(124, 247, 201, 0.55); }
+.btn.launch { background: linear-gradient(90deg, var(--accent), var(--accent2)); color: #02030a; border: 0; box-shadow: 0 0 18px rgba(124, 247, 201, 0.22); }
+.btn.launch:hover { color: #02030a; box-shadow: 0 0 30px rgba(124, 247, 201, 0.45); }
+.btn.launch.unavailable, .btn.launch.unavailable:hover { color: #9aa0aa; background: rgba(154, 160, 170, 0.12); border: 1px solid rgba(154, 160, 170, 0.22); box-shadow: none; cursor: not-allowed; }
 .readme { border-top: 1px solid var(--line); padding-top: 12px; font-size: 13.5px; color: #b8c5de; }
 .readme.loading { font-family: var(--mono); font-size: 12px; color: var(--dim); animation: blink 1.2s infinite; }
 .readme summary { font-family: var(--mono); font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); cursor: pointer; margin-bottom: 8px; }
